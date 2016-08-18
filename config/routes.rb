@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 
   resources :schools
 
+  #Subscriptions
+  post '/subscriptions' => 'subscriptions#create'
+  put '/subscriptions' => 'subscriptions#update'
+  delete '/subscriptions' => 'subscriptions#delete'
+
   #Progresses
   get 'chapter/read' => 'progresses#show'
   post 'chapters/mark_as_complete' => 'progresses#create'
@@ -16,5 +21,6 @@ Rails.application.routes.draw do
   get '/my_current_user' => 'user#my_current_user'
   match 'users/:id' => 'user#update_user', via: [:patch]  
   get '/send_password' => 'users#reset_password'
+  get '/subscribers' => 'users#subscribers'
 
 end

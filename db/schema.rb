@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818152638) do
+ActiveRecord::Schema.define(version: 20160818162309) do
 
   create_table "authentication_tokens", force: :cascade do |t|
     t.string   "body"
@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 20160818152638) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                                                                                       null: false
     t.datetime "updated_at",                                                                                                       null: false
+    t.string   "subscribed",             default: "basic"
+    t.string   "stripeid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
