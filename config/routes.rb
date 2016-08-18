@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :sessions => "sessions", :registrations => 'registrations'}
   
   resources :courses do
-    resoures :chapters
+    resources :chapters
   end
 
   resources :schools 
