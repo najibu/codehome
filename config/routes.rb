@@ -5,7 +5,12 @@ Rails.application.routes.draw do
     resources :chapters
   end
 
-  resources :schools 
+  resources :schools
+
+  #Progresses
+  get 'chapter/read' => 'progresses#show'
+  post 'chapters/mark_as_complete' => 'progresses#create'
+  delete 'chapters/mark_as_incomplete' => 'progresses#destroy'
 
   # Users
   get '/my_current_user' => 'user#my_current_user'
