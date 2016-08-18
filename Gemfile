@@ -29,7 +29,7 @@ gem 'tiddle'
 
 gem 'stripe'
 
-gem 'dotenv-rails'
+gem 'dotenv-rails', groups: [:development]
 
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 
